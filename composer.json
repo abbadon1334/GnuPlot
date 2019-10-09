@@ -1,6 +1,6 @@
 {
-    "name": "gregwar/gnuplot",
-    "description": "GnuPlot library",
+    "name": "abbadon1334/gnuplot",
+    "description": "GnuPlot library - forked from gregwar/gnuplot",
     "keywords": ["gnuplot", "graph", "plot", "stats", "image", "png"],
     "homepage": "https://github.com/Gregwar/GnuPlot",
     "license": "MIT",
