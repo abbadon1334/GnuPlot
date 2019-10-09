@@ -17,7 +17,7 @@ while (true) {
         $plot->push($x, sin($alpha + $x));
         $plot->push($x, cos($alpha * 1.5 + $x), 1);
     }
-    $plot->plot();
+    $plot->refresh();
     $alpha += 0.1;
 }
 

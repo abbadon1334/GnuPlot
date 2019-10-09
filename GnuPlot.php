@@ -601,8 +601,11 @@ class GnuPlot
 
         $this->sendCommand($gridCommand);
 
+        $this->sendCommand('set terminal qt title "GnuPlot PHP"');
+        $this->plot();
+
         if ($this->title) {
-            $this->sendCommand('set title "' . $this->title . '"');
+            $this->sendCommand('set title "' . $this->title . '" ');
         }
 
         if ($this->key) {
@@ -661,6 +664,8 @@ class GnuPlot
         foreach ($this->labels as $label) {
             $this->sendCommand('set label "' . $label[2] . '" at ' . $label[0] . ', ' . $label[1]);
         }
+
+        $this->plot();
     }
 
     /**
@@ -802,7 +807,7 @@ class GnuPlot
     public function refresh(): void
     {
         if ($this->plotted) {
-            $this->plot(true);
+            $this->plot();
         } else {
             $this->display();
         }
